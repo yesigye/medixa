@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Medixa Docs</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+    
+
+	<!-- Google Font -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> -->
+
+    <style>
+        html, body {height:100%}
+        #introduction {height:100vh}
+        h1 {margin-bottom:2rem;}
+        body,.dropdown-menu {font-family:'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;}
+        .lead {font-weight:500;}
+        .screenshot>img {cursor:pointer}
+        .flex-column {margin-top:2rem}
+        .img-thumbnail {cursor: pointer;}
+        .nav-link.active {color:#e83e8c;}
+        #sidebar-wrapper .nav-link {
+            padding: .3rem 0;
+        }
+    </style>
+</head>
+
+<body class="navoffset bg-white" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+
+    <div id="wrapper" class="">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="bg-light border-right">
+            <div class="container text-muted text-center">
+                <h4 class="mt-2">
+                    <img src="images/medixia-logo.png" alt="" style="width:60px"> Medixia
+                </h4>
+                <div class="small">Docs v1.0</div>
+            </div>
+            <hr>
+            <nav id="navbar-example2" class="container">
+                <div class="text-uppercase small mt-3 text-dark">Getting Started</div>
+                <ul class="nav flex-column mt-0 mb-2">
+                    <li class="nav-item">
+                        <a href="#introduction" class="nav-link active">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#installation" class="nav-link">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link">Dashboard</a>
+                    </li>
+                </ul>
+
+                <div class="text-uppercase small mt-3 text-dark">Users</div>
+                <ul class="nav flex-column mt-0 mb-2">
+                    <li class="nav-item">
+                        <a href="#user-groups" class="nav-link">User Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#users-add" class="nav-link">Adding Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#users-edit" class="nav-link">Editing Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#users-register" class="nav-link">User Registration</a>
+                    </li>
+                </ul>
+
+                <div class="text-uppercase small mt-3 text-dark">Hospitals</div>
+                <ul class="nav flex-column mt-0 mb-2">
+                    <li class="nav-item">
+                        <a href="#hospital-types" class="nav-link">Hospital Types</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#hospital-facilities" class="nav-link">Manage Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#hospital-specialities" class="nav-link">Manage Specialities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#hospital-add" class="nav-link">Adding new Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#hospital-edit" class="nav-link">Editing Hospitals</a>
+                    </li>
+                </ul>
+
+                <div class="text-uppercase small mt-3 text-dark">Doctors</div>
+                <ul class="nav flex-column mt-0 mb-2">
+                    <li class="nav-item">
+                        <a href="#doc-manage" class="nav-link">Managing doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#doc-assign" class="nav-link">Assiging to a hospital</a>
+                    </li>
+                </ul>
+
+                <div class="text-uppercase small mt-3 text-dark">Appointments</div>
+                <ul class="nav flex-column mt-0 mb-5">
+                    <li class="nav-item scroll-item">
+                        <a href="#book-new" class="nav-link">Booking an appointment</a>
+                    </li>
+                    <li class="nav-item scroll-item">
+                        <a href="#book-manage" class="nav-link">Managing appointments</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div id="page-content-wrapper">
+            <!-- introduction -->
+            <div style="padding-top: 5rem" class="jumbotron text-muted rounded-0" id="introduction">
+                <h1>Documentation</h1>
+                <p class="mt-2">
+                    Hello and welcome to the documentation. Thank you for purchasing this script.
+                </p>
+                <p>
+                    This script is a hospital and doctor listing management tool. It is great if you are looking for an easy-to-use script to
+                    register an updated listing of doctors and hospital from which users can search and book appointments.
+                    In addition; the script allows users to book and track appointments with physicians, who will be duly notified by email
+                    and in app notifications.
+                    Dashboards are created for hospitals accounts where they can manage their physicians, define facilities they offer,
+                    upload photos and more.
+                </p>
+                <p>
+                    For more information.
+                </p>
+                <span class="nav mt-4">
+                    <a href="#contact">Contact me</a>
+                </span>
+            </div>
+            <!-- end of introduction -->
+            
+            <div class="container-fluid">
+                <!-- installation -->
+                <div style="padding-top: 5rem" id="installation">
+                    <h2 class="lead text-danger">Installing the script on your server</h2>
+                    <p style="margin-top:3rem">
+                        <strong>Unzip the file into your server web directory usually the www, http or the public folder.</strong>
+                    </p>
+                    <p style="margin-top:3rem">
+                        <strong>
+                            Edit the the base url in the config file at
+                            <code>application/config/config.php <span class="ml-2">on line 26</span></code>
+                        </strong>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-body border-warning mb-2 text-muted">
+                                <div class="text-muted">from</div>
+                                $config['base_url'] = "http://medixa.test/"
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-body border-success text-success">
+                                <div class="text-muted">to your domain</div>
+                                $config['base_url'] = "http://yoursite.com/"
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top:3rem">
+                        <strong>
+                            Edit the .htaccess file at root of your app installation. You must have mod_rewrite
+                            enabled on your server.
+                        </strong>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-body border-warning mb-2 text-muted">
+                                <div class="text-muted">Default. Don't edit if your app is at the root of your server directory</div>
+                                RewriteBase /
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-body border-success text-success">
+                                <div class="text-muted">if your app is in a directory (e.g. "myfolder")</div>
+                                RewriteBase /myfolder/
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top:3rem">
+                        <strong>
+                            Setting up your database.
+                        </strong>
+                    </p>
+                    <div class="">
+                        Import the database file into your mysql server,
+                        The sql database file is located at the root folder named <code>database.sql</code>
+                        <p class="mt-4">
+                            If you do not have access to a database manager like PHPMyAdmin,
+                            you should be able to install the database by following these steps;
+                            <ol>
+                                <li>Edit the root <code>index.php</code> file on line 56 and change the environment to development</li>
+                                <li>
+                                    Follow the link <code>http://yoursite.com/migrate</code> to install the database automatically.
+                                    This works assuming that your base url and .htaccess file were setup properly.
+                                </li>
+                            </ol>
+                        </p>
+                    </div>
+                
+                    <div class="mb-5">Done. You are now ready!</div>
+                </div>
+                <!-- end of installation -->
+                
+                <!-- dashboard -->
+                <div style="padding-top: 5rem" id="dashboard">
+                    <h2 class="lead text-danger my-3">The admin Dashboard</h2>
+                    When you have successfully installed the script, an admin account will automatically be created
+                    with default authentication values for email and pasword. From the admin dashboard, you will be able
+                    to manage and monitor hospitals, physicians and the application's behaviour.
+                    <img src="images/admin.png" alt="" class="img-thumbnail img-fluid mt-2">
+                    <p class="mt-3">
+                        <div class="alert alert-info rounded-0 border-primary">
+                            <h5>Login credentials</h5>
+                            email address <code>admin@admin.com</code> <br>
+                            password <code>password</code>.
+                            <p class="small mt-2">
+                                We strongly recomended that you change these values for security reasons.
+                            </p>
+                        </div>
+                    </p>
+                </div>
+                <!-- end of dashboard -->
+
+                <div class="h4 text-danger mt-5">USERS</div>
+                People using the system are refered to as guests or visitors, when someone registers an account and
+                logs into
+                the system, then they are known as users.
+                <!-- user groups -->
+                <div id="user-groups" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">User Groups</div>
+                    When users are registered, they are assigned to one of 3 different user groups. User groups allows
+                    different
+                    users to interact with the system in a specific way.
+                
+                    <h5 class="mt-3">Admin</h5>
+                    The system admin is a role resbonsible for managing all the features of the system and the default
+                    system user.
+                    The admin is not visible to others and this account cannot be deleted.
+                    <div class="row">
+                        <ul class="mt-3">
+                            <li>Activate registered hospitals.</li>
+                            <li>Manage all hospitals, assign doctors to hospitals.</li>
+                            <li>Manage all users, users groups and their details.</li>
+                            <li>Can edit their own account information.</li>
+                        </ul>
+                    </div>
+                
+                    <h5 class="mt-3">Doctors</h5>
+                    Users can only be assigned as doctors by the system admin.
+                    <div class="row">
+                        <ul class="mt-3">
+                            <li>Schedule appointments with users.</li>
+                            <li>Manage their professional details.</li>
+                            <li>Can edit their own account information.</li>
+                        </ul>
+                    </div>
+                
+                    <h5 class="mt-3">General Users</h5>
+                    General users are system visitors who have registered an account and have more access to the system
+                    features.
+                    <div class="row">
+                        <ul class="mt-3">
+                            <li>Book appointments with doctors.</li>
+                            <li>Can edit their own account information.</li>
+                        </ul>
+                    </div>
+                
+                    <h5 class="mt-3">Managers</h5>
+                    Managers are general users who have been assigned to manage a hospital.
+                    Users are assigned a manager role if they registered a hospital or when the system admin assigns
+                    the user
+                    as a manager.
+                    <div class="row">
+                        <ul class="mt-3">
+                            <li>Manage hospital deetails and its data.</li>
+                            <li>Manage doctors assigned to the hospital</li>
+                            <li>Can edit their own account information.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of user groups -->
+                
+                <!-- adding users -->
+                <div id="users-add" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Ading New Users</div>
+                    Users can be added directly to the website by the administrator, however, this is feature is only
+                    available
+                    as a matter of convinience; Users should be encouraged to register individually on the website so
+                    as to
+                    avoid authentication issues. Users registering their own accounts will ensure that they enter
+                    correct information,
+                    choose their own passwords and validate their email addresses.
+                    <p class="mt-2">
+                        To add a new user manually, follow these steps;
+                    </p>
+                    <ol class="mt-3">
+                        <li>On the admin menu, select <b>Users</b></li>
+                        <li>Click the <b>Add a user</b> button</li>
+                        <li>
+                            Fill in the form
+                            <table class="table table-sm">
+                                <thead class="bg-dark text-white">
+                                    <tr>
+                                        <td>Field</td>
+                                        <td>Description</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Profile Photo</th>
+                                        <td>User avatar image</td>
+                                    </tr>
+                                    <tr>
+                                        <th>First name</th>
+                                        <td>User first name</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Last name</th>
+                                        <td>User last name</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Username</th>
+                                        <td>The name to be displayed on the system</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Password</th>
+                                        <td>The password should be five or more characters long</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Confirm password</th>
+                                        <td>Repeat the password to make sure it was entered correctly.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>The primary way that the system communicates with the user. Also used for
+                                            authentication.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ol>
+                </div>
+                <!-- end adding users -->
+                
+                <!-- editing users -->
+                <div id="users-edit" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Edit User data</div>
+                    Users can edit their account details and change their passwords after they have registered
+                    accounts, the system
+                    admin also has the priviledge of editing users' data.
+                    <ol class="mt-2">
+                        <li>On the admin menu, select <b>Users</b></li>
+                        <li>Click the edit icon button</li>
+                        <li>Update user profile</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/user-update.png" alt="" class="img-thumbnail img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <!-- end of editing users -->
+                
+                <!-- registering users -->
+                <div id="users-register" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">User Registration</div>
+                    Although users can be added by the admin, users are able to register a new account.
+                    Registration is open to any of the system guests, however, they must activate their accounts
+                    through
+                    a link that is sent to them by email. This confirms that they initiated the registration process
+                    and that the email
+                    address provided is valid. This step is important because future communincations shall be through
+                    this email address.
+                    <br><br>
+                    The admin can manually activate a user's account if the user cannot do it successfully.
+                    <ol class="mt-2">
+                        <li>On the admin menu, select <b>Users</b></li>
+                        <li>Select the user</li>
+                        <li>Click the <b>activate</b> button</li>
+                    </ol>
+                </div>
+                <!-- end of registering users -->
+                
+                <!-- removing users -->
+                <div id="users-remove" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Remove Users</div>
+                    Only the admin can remove users from the system, a deleted account will lose all the data that is
+                    associated with
+                    that account. To temporarily remove a user, simply deactivated the account, it will not be
+                    reacheable by the user
+                    and others until it is activated.
+                    <ol class="mt-2">
+                        <li>On the admin menu, select <b>Users</b></li>
+                        <li>Select the user</li>
+                        <li>Click the <b>delete</b> button</li>
+                        <li>Or click the <b>deactivate</b> button</li>
+                    </ol>
+                </div>
+                <!-- end of removing users -->
+
+                <div class="h4 text-danger mt-5">HOSPITALS</div>
+                Before managing hospitals, we need to set up types of hospitals and define facilities a hospital of
+                a certain type is might offer.
+                <!-- hospital types -->
+                <div id="hospital-types" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Hospital Types</div>
+                    You may create as many types as you want, and define facilities for each hospital type. facilities are define per
+                    type and not globally because different types of hospitals might have different facilities, for example, a nursing
+                    home
+                    might have different facilities than a rehabilitation center.
+                    <div class="row">
+                        <ol class="mt-2">
+                            <li>On the admin menu, select <b>Hospitals</b></li>
+                            <li>Click the <b>types</b> tab</li>
+                        </ol>
+                    </div>
+                    <img src="images/admin-hos-type.png" alt="" class="img-thumbnail img-fluid mt-2">
+                </div>
+                <!-- end of hospital types -->
+                
+                <!-- hospital facilities -->
+                <div id="hospital-facilities" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Hospital Facilities</div>
+                    When creating a hospital type, you can define any number of facilities for each type. If you have
+                    created sub-types, then a sub-type will inherit all the facilities of its parent type.
+                    <div class="row">
+                        <ol class="mt-2">
+                            <li>On the admin menu, select <b>Hospitals</b></li>
+                            <li>Click the <b>types</b> tab</li>
+                            <li>On the types table, locate your type</li>
+                            <li>Under facilities column click edit</li>
+                        </ol>
+                    </div>
+                    <img src="images/admin-hos-facilities.png" alt="" class="img-thumbnail img-fluid mt-2">
+                </div>
+                <!-- end of hospital facilities -->
+                
+                <!-- hospital specialities -->
+                <div id="hospital-specialities" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Manage Specialities</div>
+                    Specialities are defined here to create a speciality options list for doctors to choose from.
+                    They are also used by the script in sorting, searching and filtering purposes.
+                    <div class="row">
+                        <ol class="mt-2">
+                            <li>On the admin menu, select <b>Hospitals</b></li>
+                            <li>Click the <b>specialities</b> tab</li>
+                        </ol>
+                    </div>
+                    <img src="images/admin-hos-specialities.png" alt="" class="img-thumbnail img-fluid mt-2">
+                </div>
+                <!-- end of hospital specialities -->
+                
+                <!-- hospital add -->
+                <div id="hospital-add" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Adding a new hospital</div>
+                    After creating types and defineding hospital facilities, you are ready to add a new hospital.
+                    <div class="row">
+                        <ol class="mt-2">
+                            <li>On the admin menu, select <b>Hospitals</b></li>
+                            <li>Click the <b>Add Hospital</b> button</li>
+                            <li>
+                                <div>Fill in the form</div>
+                                <img src="images/admin-hos-add.png" alt="" class="img-thumbnail img-fluid mt-2">
+                                <table class="table table-sm">
+                                    <thead class="bg-dark text-white">
+                                        <tr>
+                                            <td>Field</td>
+                                            <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Business Name</th>
+                                            <td>Name of the hospital</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hospital Type</th>
+                                            <td>The type of your hospital</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email Address</th>
+                                            <td>Hospital's email address, may require confirmation</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Address</th>
+                                            <td>Physical location of the hospital</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone</th>
+                                            <td>Phone number</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ol>
+                        <div class="text-muted">
+                            After adding a new hospital, go on to edit page to add more information and added photos.
+                        </div>
+                    </div>
+                </div>
+                <!-- end of hospital add -->
+                
+                <!-- hospital edit -->
+                <div id="hospital-edit" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Editing a hospital</div>
+                    After creating a hospital. The editing page is provided for you to add more data about the hospital.
+                    This data is grouped into 3 sections, the details section which contains hospital information, the
+                    images section where you upload your photos and a physicians section where you manage hospital doctors.
+                
+                    <h4 class="mt-3">Details Section</h4>
+                    This section contains a detailed form with fields to edit hospital information
+                    <table class="table table-sm">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <td>Field</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <td>Name of the hospital</td>
+                            </tr>
+                            <tr>
+                                <th>Slogan</th>
+                                <td>slogan of the hospital</td>
+                            </tr>
+                            <tr>
+                                <th>Open Hours</th>
+                                <td>The time the hospital opens and closes</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>Physical location of the hospital</td>
+                            </tr>
+                            <tr>
+                                <th>Phone</th>
+                                <td>Phone number</td>
+                            </tr>
+                            <tr>
+                                <th>Email Address</th>
+                                <td>Hospital's email address, may require confirmation</td>
+                            </tr>
+                            <tr>
+                                <th>About us</th>
+                                <td>More about the hospital, for example, mission statement or your vision</td>
+                            </tr>
+                            <tr>
+                                <th>Active</th>
+                                <td>Activation status, inactive hospitals will be hidden from the public</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <h4 class="mt-5">Images Section</h4>
+                    This section manages hospital photos that will be displayed in a slider when users are looking at the hospital.
+                    <img src="images/admin-hos-edit-images.png" alt="" class="img-thumbnail img-fluid mt-2">
+                
+                    <h4 class="mt-5">Physicians Section</h4>
+                    This section manages hospital doctors. Here you can only assign existing doctors to the hospital or remove them
+                    from the
+                    hospital. To add new users or remove them from the system, check out the <a href="#users-add">section on users</a>
+                    <img src="images/admin-hos-edit-users.png" alt="" class="img-thumbnail img-fluid mt-2">
+                
+                    <h4 class="mt-5">Assigning doctors to a hospital</h4>
+                    <div class="row">
+                        <ol class="mt-2">
+                            <li>On the admin menu, select <b>Hospitals</b></li>
+                            <li>Click the hospital name to edit it</li>
+                            <li>Click the <b>Physicians</b> tab</li>
+                            <li>Click the <b>Assign Physicians</b> button</li>
+                            <li>Select the doctors from a list</li>
+                            <li>Click the <b>Assign</b> button</li>
+                        </ol>
+                    </div>
+                    <img src="images/admin-hos-edit-users-add.png" alt="" class="img-thumbnail img-fluid mt-2">
+                </div>
+                <!-- end of hospital edit -->
+                
+                <div class="h4 text-danger mt-5">DOCTORS</div>
+                Doctors or physicians(as sometimes refered to) are users who have been registered as medical practitioners
+                that provide healthcare services. Doctors can only be added by the admin, users cannot register
+                directly as doctors. The script was design like this to avoid fake entries, the admin
+                is therefore tasked with creating doctor accounts. 
+
+                <!-- managing doctors -->
+                <div id="doc-manage" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Managing Doctors</div>
+                    Doctors are still considered users and can be edited in the <a href="#users-add">users section</a>,
+                    The only difference is that doctors have a free extra fields that define their profession.
+                    <table class="table table-sm mt-2">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <td>Field</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Reg. No</th>
+                                <td>A unique doctor registeration number</td>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
+                                <td>A brief portifolio about doctor and their practice</td>
+                            </tr>
+                            <tr>
+                                <th>Speciality</th>
+                                <td>Choose a field of sepecialization</td>
+                            </tr>
+                            <tr>
+                                <th>Qualifacation</th>
+                                <td>Highest education or training level</td>
+                            </tr>
+                            <tr>
+                                <th>Other qualifacation</th>
+                                <td>Any other certificates or awards</td>
+                            </tr>
+                            <tr>
+                                <th>Mobile Services</th>
+                                <td>You may be required to travel to your patients.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end of managing doctors -->
+
+                <!-- hospital types -->
+                <div id="doc-assign" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Assiging to a hospital</div>
+                    Hospitals are responsible for assigning doctors, doctors cannot assign themselves to hospitals.
+                    To learn how to assign doctors to a hospital, see the <a href="#hospital-edit">editing hospital section</a>
+                    of this documentation. 
+                </div>
+                <!-- end of hospital types -->
+
+                <div class="h4 text-danger mt-5">APPOINTMENTS</div>
+                This scripts allows registered users to book appointments with doctors. Doctors can also book appointments with other
+                doctors.
+                Users that are not logged in will be prompted to log in before the can book an appointment.
+                
+                <!-- appointments booking -->
+                <div id="book-new" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Booking an appointment</div>
+                    When a user books an appointment with a doctor, the doctor is notified by email and they will also get a reminder
+                    the next time they login. Doctors can then approve or cancel the appointment, at which point the user will
+                    automatically
+                    be notified by email.
+                </div>
+                <!-- end of appointments booking -->
+                
+                <!-- appointments management -->
+                <div id="book-manage" class="pt-5">
+                    <div class="h5 mt-5 mb-3 text-danger">Managing appointments</div>
+                    Logged in users are able to view and manage their appointments although only doctors can approve and/or reshudele
+                    existing appointments.
+                    <img src="images/appointments.png" alt="" class="img-thumbnail img-fluid mt-2">
+                </div>
+                <!-- end of appointments management -->
+                
+                <!-- appointments management -->
+                <div id="book-manage" class="pt-5">
+                    <div class="h4 text-danger mt-5">SETTINGS</div>
+                    Settings module offers ab interface where you can change your preferences and how the script works.
+                    <div class="h5 mt-5 mb-3 text-danger">Managing appointments</div>
+                    The script's esay-to-use interface offers a simple was to change the default language and also translate
+                    text to different languages. This scripts uses english as the initial default and a reference language.
+                    
+                    Please note that translations are stored in files on your webserver. You must have write permission
+                    so that you can translate file. If you don't, contact your webmster or you could manually write out
+                    translated files and upload them to the server.
+                    
+                    <div class="h5 mt-5 mb-3 text-black">How languagues work</div>
+                </div>
+                <!-- end of appointments management -->
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <footer class="container pt-2 pb-4 text-muted clearfix">
+        <span>Medixa Docs</span>
+        <span class="m-t-md float-right">Copyright &copy; Medixa</span>
+    </footer>
+
+
+<!-- LightBox Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div id="modal-image"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        // Simple LightBox click event on images
+        $('img').click(function() {
+            var img = $(this);
+            $('#modal-image').html(img.clone());
+            $('#myModal').modal('show');
+        })
+        // override default anchor behaviour.   
+        $('body a[data-toggle="tab"]').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+            // update url hash for safe refreshing
+            document.location.hash = $(this).attr('href');
+        })
+        // For redirects
+        var hash = $(location).prop('hash');
+        $('body a[href="'+hash+'"]').tab('show')
+
+    });
+</script>
+
+</body>
+</html>
