@@ -1,0 +1,2 @@
+# medixa
+This script is a hospital and doctor listing management tool. It is great if you are looking for an easy-to-use script to register an updated listing of doctors and hospital from which users can search and book appointments. In addition; the script allows users to book and track appointments with physicians, who will be duly notified by email and in app notifications. Dashboards are created for hospitals accounts where they can manage their physicians, define facilities they offer, upload photos and more.
